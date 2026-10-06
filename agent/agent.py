@@ -25,9 +25,9 @@ import websockets
 
 pyautogui.FAILSAFE = False
 
-FPS = 6
-JPEG_QUALITY = 55
-FRAME_WIDTH = 1100
+FPS = 5
+JPEG_QUALITY = 60
+FRAME_WIDTH = 640
 
 
 async def screen_sender(ws, stop_event):
