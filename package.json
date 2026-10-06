@@ -1,0 +1,13 @@
+{
+  "name": "web-remote-control",
+  "version": "1.0.0",
+  "description": "No-login website that views and controls a remote screen shared by a Python agent",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.17.0"
+  }
+}

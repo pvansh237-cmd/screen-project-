@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: web-remote-control
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
