@@ -66,7 +66,11 @@ function sendControl(payload) {
 
 // ---- Mouse control: normalize coordinates 0..1 so it maps correctly
 // regardless of the host's actual screen resolution ----
+let lastMoveSent = 0;
 canvas.addEventListener('mousemove', (e) => {
+  const now = Date.now();
+  if (now - lastMoveSent < 80) return; // throttle: max ~12 move-events/sec
+  lastMoveSent = now;
   const rect = canvas.getBoundingClientRect();
   const x = (e.clientX - rect.left) / rect.width;
   const y = (e.clientY - rect.top) / rect.height;
